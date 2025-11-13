@@ -56,11 +56,22 @@ body {
                 }
             }
             .contents_right {
-                @include flex-col; gap:240px;
+                @include flex-col;
                 .title_wrap {
                     @include flex-col; gap:32px;
                     .special_title {@include h2_special_title;}
                     .desc {@include p_desc; color:$color-grey;}
+                    margin-bottom:140px;
+                }
+                .sub_tab_menu {
+                    @include flex-row; gap:20px; align-items:center;
+                    margin-bottom:60px;
+                    a {@include p_desc;}
+                    a.active {
+                        @include h3_brand_name; font-size:$font-size-28;
+                        text-decoration: underline;
+                        color:$color-point;
+                    }
                 }
                 .prod_wrap {
                     @include flex-row; gap:26px;
