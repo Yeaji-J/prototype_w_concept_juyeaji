@@ -2,30 +2,32 @@
 
 /* 상품 공통 */
 .prod {
+    position:relative;
     width:290px; height:500px;
     @include flex-col; gap:20px;
-    img {width:290px; height:370px;}
-    .prod_desc {
-        @include flex-col; gap:16px;
-        overflow:hidden;
-        .brand_btn {
-            width:290px; @include flex-row; justify-content:space-between;
+    a {
+        img {width:290px; height:370px;}
+        .prod_desc {
+            margin-top:20px;
+            @include flex-col; gap:16px;
+            overflow:hidden;
             .brand_name {width:max-content;
                 @include h3_brand_name;}
-            .fav_btn {
-                width:24px; height:24px;
-                img {width:100%; height:100%}
+            .prod_name {
+                width:max-content; height:100%;
+                @include h3_prod_name; color:$color-grey;
+            }
+            .price {
+                @include flex-row; gap:16px;
+                .dc_rate {@include p_price; color:$color-point;}
+                .dc_price {@include p_price;}
             }
         }
-        .prod_name {
-            width:max-content; height:100%;
-            @include h3_prod_name; color:$color-grey;
-        }
-        .price {
-            @include flex-row; gap:16px;
-            .dc_rate {@include p_price; color:$color-point;}
-            .dc_price {@include p_price;}
-        }
+    }
+    .fav_btn {
+        position:absolute; right:0; top:394px;
+        width:24px; height:24px;
+        .fav_icon {width:100%; height:100%}
     }
 }
 
