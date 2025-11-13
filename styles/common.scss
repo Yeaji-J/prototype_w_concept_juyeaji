@@ -1,0 +1,23 @@
+$font-size-60:3.75rem;
+$font-size-32:2rem;
+$font-size-28:1.75rem;
+$font-size-24:1.5rem;
+$font-size-20:1.25rem;
+$font-weight-reg:400;
+$font-weight-med:500;
+$font-weight-sbold:600;
+$font-weight-bold:700;
+$color-point:#ef9300;
+$color-grey:#aaa;
+$color-black:#000;
+$color-white:#fff;
+
+@mixin h2_title {font-size:$font-size-32; font-weight:$font-weight-sbold; line-height:1; letter-spacing:-2%;}
+@mixin h2_special_title {font-size:$font-size-60; font-weight:$font-weight-sbold; line-height:1; letter-spacing:-2%;}
+@mixin h3_brand_name {font-size:$font-size-24; font-weight:$font-weight-sbold; line-height:1; letter-spacing:-2%;}
+@mixin h3_prod_name {font-size:$font-size-20; font-weight:$font-weight-med; line-height:1; letter-spacing:-2%;}
+@mixin p_price {font-size:$font-size-28; font-weight:$font-weight-bold; line-height:1; letter-spacing:-2%;}
+@mixin p_desc {font-size:$font-size-24; font-weight:$font-weight-reg; line-height:1; letter-spacing:-2%;}
+
+@mixin flex-row {display:flex; flex-flow:row nowrap;}
+@mixin flex-col {display:flex; flex-flow:column nowrap;}
